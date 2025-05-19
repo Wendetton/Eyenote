@@ -296,8 +296,8 @@ export default function DocumentPage() {
 
     // Estilos CSS para a tabela copiada
     const tableStyle = 'border-collapse: collapse; width: auto; font-family: Tahoma, Arial, sans-serif; font-size: 10pt;';
-    const thStyleBase = 'border: 1px solid #dddddd; padding: 4px; background-color: #f2f2f2; white-space: nowrap; min-width: 60px;';
-    const tdStyleBase = 'border: 1px solid #dddddd; padding: 4px; white-space: nowrap; min-width: 60px;';
+    const thStyleBase = 'border: 1px solid #dddddd; padding: 4px; background-color: #f2f2f2;';
+    const tdStyleBase = 'border: 1px solid #dddddd; padding: 4px;';
     
     const thStyles = {
         default: `${thStyleBase} text-align: left;`,

@@ -297,26 +297,18 @@ export default function DocumentPage() {
     // Estilos CSS para a tabela copiada
     const tableStyle = 'border-collapse: collapse; width: auto; font-family: Tahoma, Arial, sans-serif; font-size: 10pt;';
     const thStyleBase = 'border: 1px solid #dddddd; padding: 4px; background-color: #f2f2f2;';
-    const tdStyleBase = 'border: 1px solid #dddddd; padding: 4px;';
-    let htmlTable = `<table style="${tableStyle}">`;
-    htmlTable += `<colgroup>
-    <col style="width: 120px;"> <!-- Coluna A (Vazia/Olho Direito/Olho Esquerdo/Para perto) -->
-    <col style="width: 80px;">  <!-- Coluna B (ESF) -->
-    <col style="width: 80px;">  <!-- Coluna C (CIL) -->
-    <col style="width: 80px;">  <!-- Coluna D (Eixo) -->
-    </colgroup>`;
-    htmlTable += `<thead><tr>`;
-
+    const tdStyleBase = 'border: 1px solid #dddddd; padding: 4px;'
+    
     const thStyles = {
-        default: `${thStyleBase} text-align: left;`,
-        center: `${thStyleBase} text-align: center;`
-    };
+        default: `${thStyleBase} text-align: left; width: 120px;`, // Coluna A - mais larga
+        center: `${thStyleBase} text-align: center; width: 80px;`  // Colunas B, C, D - mais estreitas
+};
 
     const tdStyles = {
-        default: `${tdStyleBase} text-align: left;`,
-        centerBold: `${tdStyleBase} text-align: center; font-weight: bold;`,
-        right: `${tdStyleBase} text-align: right;`
-    };
+        default: `${tdStyleBase} text-align: left; width: 120px;`,
+        centerBold: `${tdStyleBase} text-align: center; font-weight: bold; width: 80px;`,
+        right: `${tdStyleBase} text-align: right; width: 120px;`
+};  
 
     let htmlTable = `<table style="${tableStyle}">`;
     htmlTable += `<thead><tr>`;
